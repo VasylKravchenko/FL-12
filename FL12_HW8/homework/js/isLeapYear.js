@@ -8,7 +8,6 @@ function isLeapYear (value) {
     } else {
         return `${year} is not a leap year`;
     }
-
 }
 
 console.log(isLeapYear('2020-01-01 00:00:00'));
