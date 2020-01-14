@@ -97,3 +97,13 @@ function substitute(arr) {
     });
 }
 console.log(substitute([fie, ftn, foe, two, to, tn]));
+
+//task9
+function getPastDay(date, offsetDays) {
+    return new Date(date - offsetDays * mlsDay).getDate();
+}
+const mlsDay = 86400000;
+const yr = 2019;
+const date = new Date(yr, 0, two);
+
+console.log(getPastDay(date, two));
