@@ -1,4 +1,5 @@
 const one = 1, two = 2, three = 3, five = 5, eight = 8;
+
 // task 1
 function convert() {
     let valArr = [];
@@ -69,3 +70,18 @@ function makeListFromRange(range) {
     return arr;
 }
 console.log(makeListFromRange([two, eight]));
+
+//task7
+function getArrayOfKeys(arr, keyName) {
+    let names = [];
+    executeForEach(arr, function(el) {
+        names.push(el[keyName])
+    });
+    return names;
+}
+
+const actors = [
+    { name: 'tommy', age: 36 },
+    { name: 'lee', age: 28 }
+];
+console.log(getArrayOfKeys(actors, 'name'));
