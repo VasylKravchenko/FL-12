@@ -47,3 +47,13 @@ function filterArray(arr, func) {
 console.log(filterArray([two, five, eight], function(el) {
     return el % two === 0
 }));
+
+//task5
+function flipOver(str) {
+    let newStr = '';
+    for (let i = str.length - one; i >= 0; i--) {
+        newStr += str[i];
+    }
+    return newStr;
+}
+console.log(flipOver('hey world'));
