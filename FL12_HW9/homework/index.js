@@ -13,4 +13,15 @@ function convert() {
     return valArr;
 }
 
-convert('1', 2, 3, '4');
+// convert('1', 2, 3, '4');
+
+//task2
+function executeForEach(arr, func) {
+    for(let i of arr) {
+        func(i)
+    }
+}
+
+executeForEach([1,2,3], function(el) {
+    console.log(el * 2)
+} )
