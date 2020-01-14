@@ -107,3 +107,16 @@ const yr = 2019;
 const date = new Date(yr, 0, two);
 
 console.log(getPastDay(date, two));
+
+//task10
+function formatDate(date) {
+    let t = 10;
+    let year = date.getFullYear();
+    let month = date.getMonth() + one;
+    let day = date.getDate();
+    let hh = date.getHours() < t ? '0' + date.getHours() : date.getHours();
+    let mm = date.getMinutes() < t ? '0' + date.getMinutes() : date.getMinutes();
+    return `${year}/${month}/${day} ${hh}:${mm}`
+}
+console.log(formatDate(new Date('6/15/2018 09:15:00')));
+console.log(formatDate(new Date()));
