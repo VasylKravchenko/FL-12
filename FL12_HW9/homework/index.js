@@ -1,19 +1,19 @@
+const one = 1, two = 2, three = 3;
 // task 1
 function convert() {
     let valArr = [];
     for (let i = 0; i < arguments.length; i++) {
 
         if (typeof arguments[i] === 'number') {
-            arguments[i] = String(arguments[i]);
+            arguments[i] = arguments[i].toString();
         } else if (typeof arguments[i] === 'string') {
-            arguments[i] = Number(arguments[i]);
+            arguments[i] = parseInt(arguments[i]);
         }
         valArr.push(arguments[i]);
     }
     return valArr;
 }
-
-// convert('1', 2, 3, '4');
+console.log(convert('1', two, three, '4'));
 
 //task2
 function executeForEach(arr, func) {
@@ -22,6 +22,15 @@ function executeForEach(arr, func) {
     }
 }
 
-executeForEach([1,2,3], function(el) {
-    console.log(el * 2)
-} )
+//task3
+function mapArray(arr, func) {
+    let newArr = [];
+    executeForEach(arr, function (arr) {
+        newArr.push(func(parseInt(arr)));
+        });
+    return newArr;
+}
+
+// console.log(mapArray([two, '5', three], function(el) {
+//     return el + three
+// }));
