@@ -1,4 +1,4 @@
-const one = 1, two = 2, three = 3;
+const one = 1, two = 2, three = 3, five = 5, eight = 8;
 // task 1
 function convert() {
     let valArr = [];
@@ -30,7 +30,20 @@ function mapArray(arr, func) {
         });
     return newArr;
 }
+console.log(mapArray([two, '5', three], function(el) {
+    return el + three
+}));
 
-// console.log(mapArray([two, '5', three], function(el) {
-//     return el + three
-// }));
+//task4
+function filterArray(arr, func) {
+    let newArr = [];
+    executeForEach(arr, function (arr) {
+        if (func(arr)) {
+            newArr.push(arr);
+        }
+    });
+    return newArr;
+}
+console.log(filterArray([two, five, eight], function(el) {
+    return el % two === 0
+}));
