@@ -1,4 +1,5 @@
-const one = 1, two = 2, three = 3, five = 5, eight = 8;
+const one = 1, two = 2, three = 3, five = 5, eight = 8, a = 30,
+fie = 58, ftn = 14, foe = 48, to = 31, tn = 29;
 
 // task 1
 function convert() {
@@ -85,3 +86,14 @@ const actors = [
     { name: 'lee', age: 28 }
 ];
 console.log(getArrayOfKeys(actors, 'name'));
+
+//task8
+function substitute(arr) {
+    return mapArray(arr, function(el) {
+        if(el < a) {
+            el = '*';
+        }
+        return el;
+    });
+}
+console.log(substitute([fie, ftn, foe, two, to, tn]));
