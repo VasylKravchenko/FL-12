@@ -57,3 +57,15 @@ function flipOver(str) {
     return newStr;
 }
 console.log(flipOver('hey world'));
+
+//task6
+function makeListFromRange(range) {
+    let arr = [];
+    let start = range[0];
+    let end = range[1];
+    for (let i = start; i <= end; i++) {
+        arr.push(i)
+    }
+    return arr;
+}
+console.log(makeListFromRange([two, eight]));
