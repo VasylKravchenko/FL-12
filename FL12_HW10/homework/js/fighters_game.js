@@ -23,7 +23,7 @@ class Fighter {
         this.getHealth = function() {
             return hp;
         };
-        this.dealDamage = function() {
+        this.dealDamage = function(dmg) {
             if (hp > 0 && dmg < hp) {
                 hp -= dmg;
             } else {
