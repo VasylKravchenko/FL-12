@@ -34,7 +34,7 @@ class Fighter {
             const successRange = 100;
             let successPoint = Math.floor(Math.random() * successRange + 1);
             let attackProbability = successRange - (defender.getStrength() + defender.getAgility());
-            if (attackProbability <= successPoint) {
+            if (attackProbability < successPoint) {
                 defender.dealDamage(dmg);
                 console.log(`${name} makes ${dmg} damage to ${defender.getName()}`);
             } else {
