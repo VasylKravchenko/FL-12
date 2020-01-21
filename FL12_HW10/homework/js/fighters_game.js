@@ -88,25 +88,3 @@ function battle(unit1, unit2) {
         return console.log(`${unit2.getName()} is dead`)
     }
 }
-
-const fighter1 = new Fighter({
-    name: 'Maximus',
-    damage: 20,
-    strength: 20,
-    agility: 15,
-    hp: 100
-});
-
-const fighter2 = new Fighter({
-    name: 'Commodus',
-    damage: 25,
-    strength: 25,
-    agility: 20,
-    hp: 90
-});
-
-battle(fighter1, fighter2);
-console.log(`${fighter1.getName()} hp ${fighter1.getHealth()}`);
-console.log(`${fighter2.getName()} hp ${fighter2.getHealth()}`);
-fighter1.logCombatHistory();
-fighter2.logCombatHistory();
