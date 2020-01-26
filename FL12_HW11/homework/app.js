@@ -37,4 +37,19 @@ const structure = [
 
 const rootNode = document.getElementById('root');
 
-// Todo: your code goes here
+function buildTree(root, arr) {
+  let mkUl = document.createElement('ul');
+  let mkLi = document.createElement('li');
+  root = root.append(mkUl);
+
+  arr.forEach(el => {
+    if(el.folder) {
+      el = mkLi;
+      el.classList.add('folder');
+      el.innerHTML = ``
+      el.append(mkUl);
+    }
+  });
+}
+
+buildTree(rootNode, structure);
